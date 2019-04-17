@@ -1,8 +1,7 @@
-FROM index.alauda.cn/demo100/piggyjava 
+FROM index.alauda.cn/demo100/piggyjava
 MAINTAINER Alexander Lukyanchikov <sqshq@sqshq.com>
 
 CMD ["mkdir", "/app"]
-ADD ./servicea-1.0.0.war /app/
-CMD ["java", "-Xmx200m", "-jar", "/app/servicea-1.0.0.war"]
-
-EXPOSE 2222
+COPY ./servicea-1.0.0.jar /app/
+RUN chmod +x /app
+ENTRYPOINT [ "/app" ]
