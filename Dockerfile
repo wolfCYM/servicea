@@ -1,5 +1,3 @@
-FROM java:8-jdk
-
 FROM index.alauda.cn/demo100/piggyjava 
 MAINTAINER Alexander Lukyanchikov <sqshq@sqshq.com>
 
